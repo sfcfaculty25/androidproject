@@ -61,6 +61,7 @@ public class FetchDatabase extends BaseAdapter
 
         Button btn_del = root.findViewById(R.id.btn_del);
         Button btn_update  = root.findViewById(R.id.btn_update);
+        Glide.with(context).load("https://firebasestorage.googleapis.com/v0/b/firstapp-4043d.appspot.com/o/"+storageReference.getName()+"%2F"+data.get(position).getImg()+"?alt=media&token=f011aef1-c00b-44a5-97d6-75f50916e254").into(img);
 
         btn_del.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +78,7 @@ public class FetchDatabase extends BaseAdapter
             public void onClick(View view)
             {
                 Intent x = new Intent(context,updatedata.class);
+                x.putExtra("imgname",data.get(position).getImg().toString());
                 x.putExtra("stdid",data.get(position).getStdid());
                 x.putExtra("email",data.get(position).getStdname());
                 x.putExtra("pass",data.get(position).getCourse());
@@ -91,7 +93,6 @@ public class FetchDatabase extends BaseAdapter
 //            }
 //        });
 
-        Glide.with(context).load("https://firebasestorage.googleapis.com/v0/b/firstapp-4043d.appspot.com/o/"+storageReference.getName()+"%2F"+data.get(position).getImg()+"?alt=media&token=f011aef1-c00b-44a5-97d6-75f50916e254").into(img);
 
         textview_stdname.setText(data.get(position).getStdname());
        textview_course.setText(storageReference.getName()+"%2F"+data.get(position).getImg());

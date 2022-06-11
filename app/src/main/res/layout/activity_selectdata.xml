@@ -7,6 +7,19 @@
     android:orientation="vertical"
     tools:context=".selectdata">
 
+    <EditText
+        android:id="@+id/txtsearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        />
+
     <ListView
         android:id="@+id/listviewdata"
         android:layout_width="match_parent"

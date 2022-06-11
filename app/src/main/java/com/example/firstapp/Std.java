@@ -13,7 +13,8 @@ public class Std
     {
     }
 
-    public Std(String stdid, String stdname, String course, String img) {
+    public Std(String stdid, String stdname, String course, String img)
+    {
         this.stdid = stdid;
         this.stdname = stdname;
         this.course = course;
